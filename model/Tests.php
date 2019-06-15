@@ -4,6 +4,7 @@ class Tests
 {
     private $pdo;
     public $countTests;
+    public $separator = '//-//';
 
     function __construct($pdo) {
         $this->pdo = $pdo;
@@ -18,7 +19,7 @@ class Tests
 
     }
 
-    private function simpleInquiry($inquiry) {
+    public function simpleInquiry($inquiry) {
         $stmt = $this->pdo->prepare($inquiry);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -26,7 +27,8 @@ class Tests
 
     public function testsListGetter($page, $limit) {
         $offset = ($page * $limit) - $limit;
-        $inquiry = 'SELECT * FROM `tests` LIMIT ' . $limit . ' OFFSET ' . $offset;
+        $inquiry = 'SELECT test_name FROM `tests` LIMIT ' . $limit . ' OFFSET ' . $offset;
         return $this->simpleInquiry($inquiry);
     }
+    
 }
