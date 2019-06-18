@@ -8,6 +8,17 @@
     <title>Test</title>
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./index.php">
+            <img src="./img/t.jpg" width="30" height="30" alt="">
+            TESTS
+        </a>
+        <a class="navbar-brand" href="../controller/controller.php?action=logaut">
+            <img src="./img/x.png" width="20" height="20" alt="">
+            Выйти
+        </a>
+    </nav>
+    
     <div class="card">
         <div class="card-body">
             <h1><?php echo $currentTest ?></h1>
@@ -17,11 +28,9 @@
                 $this->questionsShower($questions);
             ?>
             <div>
-                <input type="submit" name="" value="Отправить" class="btn btn-primary btn-lg btn-block">
+                <input type="submit" name="" value="Отправить" class="btn btn-outline-info">
             </div>
             </form>
-
-            <div><a class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true" href="./index.php">все тесты</a></div>
         </div>
     </div>
 </body>

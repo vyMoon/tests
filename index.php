@@ -10,6 +10,7 @@ spl_autoload_register(function ($class) {
 	}
 });
 
+session_start();
 
 $connection = new Connection();
 $index = new Index($connection->dbConnection);

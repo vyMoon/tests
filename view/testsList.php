@@ -8,6 +8,16 @@
     <title>Tests List</title>
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./index.php">
+            <img src="./img/t.jpg" width="30" height="30" alt="">
+            TESTS
+        </a>
+        <a class="navbar-brand" href="../controller/controller.php?action=logaut">
+            <img src="./img/x.png" width="20" height="20" alt="">
+            Выйти
+        </a>
+    </nav>
 
     <div class="card">
         <div class="card-body">
